@@ -1,0 +1,24 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+roog_contract = "6NchgAdLqvbXafnsHobsvPsaepA9QDh5ccsWVcbBRojx"
+
+[programs.devnet]
+roog_contract = "6hieSD2jrQG2ZsVWWDHNiCnSxkZzCrA5cDxXZioZQkLK"
+
+[programs.mainnet]
+roog_contract = "6NchgAdLqvbXafnsHobsvPsaepA9QDh5ccsWVcbBRojx"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "./key.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
